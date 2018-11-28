@@ -129,7 +129,7 @@ options:
 ```
 
 ### SDK
-System frameworks and libs can be linked by using the `sdk` dependency type. You can either specify frameworks or libs by using a `.framework` or `.tbd` filename, respectively
+System frameworks and libs can be linked by using the `sdk` dependency type. You can either specify frameworks or libs by using a `.framework`, `.tbd` or `.a` filename, respectively
 
 ```yaml
 targets:
@@ -137,4 +137,5 @@ targets:
     dependencies:
       - sdk: Contacts.framework
       - sdk: libc++.tbd
+      - sdk: libevent.a
 ```

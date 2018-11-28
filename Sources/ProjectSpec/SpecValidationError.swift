@@ -29,7 +29,7 @@ public struct SpecValidationError: Error, CustomStringConvertible {
             case let .invalidXcodeGenVersion(minimumVersion, version):
                 return "XcodeGen version is \(version), but minimum required version specified as \(minimumVersion)"
             case let .invalidSDKDependency(target, dependency):
-                return "Target \(target.quoted) has invalid sdk dependency: \(dependency.quoted). It must be a full path or have the following extensions: .framework, .dylib, .tbd"
+                return "Target \(target.quoted) has invalid sdk dependency: \(dependency.quoted). It must be a full path or have the following extensions: .framework, .dylib, .tbd, .a"
             case let .invalidTargetDependency(target, dependency):
                 return "Target \(target.quoted) has invalid dependency: \(dependency.quoted)"
             case let .invalidTargetConfigFile(target, configFile, config):

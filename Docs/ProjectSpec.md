@@ -330,7 +330,7 @@ A dependency can be one of a 3 types:
 - `target: name` - links to another target
 - `framework: path` - links to a framework
 - `carthage: name` - helper for linking to a Carthage framework
-- `sdk: name` - links to a dependency with the SDK. This can either be a relative path within the sdk root or a single filename that references a framework (.framework) or lib (.tbd)
+- `sdk: name` - links to a dependency with the SDK. This can either be a relative path within the sdk root or a single filename that references a framework (.framework) or lib (.tbd or .a)
 
 **Linking options**:
 
@@ -365,6 +365,7 @@ targets:
       - carthage: Result
       - sdk: Contacts.framework
       - sdk: libc++.tbd
+      - sdk: libevent.a
   MyFramework:
     type: framework
 ```
